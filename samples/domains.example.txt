@@ -1,0 +1,5 @@
+# One domain per line. Lines starting with # are ignored.
+# Useful for agencies: check a whole client list, or your outreach list, in one run.
+github.com
+stripe.com
+example.com
