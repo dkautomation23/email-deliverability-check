@@ -1,5 +1,7 @@
 # email-deliverability-check
 
+[![CI](https://github.com/dkautomation23/email-deliverability-check/actions/workflows/ci.yml/badge.svg)](https://github.com/dkautomation23/email-deliverability-check/actions/workflows/ci.yml)
+
 Reads a domain's DNS and tells you why its mail is landing in spam — or is
 about to. SPF, DKIM, DMARC, MX, MTA-STS, BIMI, in about five seconds, with no
 access to the domain and nothing sent.
