@@ -376,9 +376,9 @@ def selftest() -> int:
     check("a and mx each cost one", spf_lookup_count("v=spf1 a mx -all") == 2)
     check("ptr costs one", spf_lookup_count("v=spf1 ptr -all") == 1)
 
-    dmarc = parse_dmarc("v=DMARC1; p=quarantine; rua=mailto:d@x.com; pct=50; sp=none")
+    dmarc = parse_dmarc("v=DMARC1; p=quarantine; rua=mailto:d@example.com; pct=50; sp=none")
     check("dmarc policy parsed", dmarc["p"] == "quarantine")
-    check("dmarc rua parsed", dmarc["rua"] == "mailto:d@x.com")
+    check("dmarc rua parsed", dmarc["rua"] == "mailto:d@example.com")
     check("dmarc pct parsed", dmarc["pct"] == "50")
     check("dmarc subdomain policy parsed", dmarc["sp"] == "none")
     check("dmarc tolerates spacing", parse_dmarc("v=DMARC1;   p=reject ;")["p"] == "reject")
